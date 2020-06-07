@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <a class="navbar-brand" [routerLink]="['/']">Navbar</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="ml-auto">
+      <a [routerLink]="['/new']" class="btn btn-secondary text-light">
+        Nuevo git
+      </a>
+
+      <a [routerLink]="['/repo']" class="btn btn-secondary text-light">
+        Buscar tu Repo
+      </a>
+    </div>
+  </div>
+</nav>

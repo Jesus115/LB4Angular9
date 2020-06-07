@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Form note
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="getUsers()" #f="ngForm">
+        <div class="form-group">
+          <input
+            type="text"
+            name="user"
+            required
+            [(ngModel)]="users"
+            required
+            placeholder="Buscar Nombre"
+          />
+        </div>
+        <div class="card-footer">
+          <ul *ngFor="let data of dataList" class="list-group">
+            <app-repos-name [data]="data"></app-repos-name>
+          </ul>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+          Listar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
